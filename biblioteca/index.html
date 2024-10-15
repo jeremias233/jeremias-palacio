@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="Styleindex.css">
+</head>
+<body>
+    <h1 id="title">Gestión de Alumnos</h1>
+    <div id="container" class="container">
+        <h2>Agregar Alumno</h2>
+        <form id="addStudentForm" method="post" action="alta.php">
+            <input type="text" id="nombreAlum" name="NombreAlum" placeholder="Nombre del Alumno" required>
+            <input type="text" id="apellidoAlum" name="ApellidoAlum" placeholder="Apellido del Alumno" required>
+            <input type="text" id="cursoAlum" name="CursoAlum" placeholder="Curso del Alumno" required>
+            <input type="text" id="nombreLib" name="NombreLib" placeholder="Nombre del Libro" required>
+            <input type="number" id="cantidad" name="Cantidad" placeholder="Cantidad a retirar" required>
+            <input type="date" id="fecha" name="fecha" required>
+            <input type="time" id="hora" name="hora" required>
+            <button type="submit" id="submitBtn" name="submit">Agregar</button>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('addStudentForm');
+            form.addEventListener('submit', function(e) {
+                // El formulario ahora se enviará directamente a alta.php
+                // No es necesario prevenir el comportamiento por defecto
+                // ni manejar la lógica de envío aquí
+            });
+        });
+    </script>
+</body>
+</html>
